@@ -1,5 +1,6 @@
 package samsao.repo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,7 +33,7 @@ public class MainPresenterImpl implements MainPresenter, FindItemsInteractor.OnF
         mainView = null;
     }
 
-    @Override public void onFinished(List<String> items) {
+    @Override public void onFinished(ArrayList<RepoSummary> items) {
         if (mainView != null) {
             mainView.setItems(items);
             mainView.hideProgress();

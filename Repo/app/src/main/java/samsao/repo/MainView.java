@@ -1,5 +1,6 @@
 package samsao.repo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ public interface MainView {
 
     void hideProgress();
 
-    void setItems(List<String> items);
+    void setItems(ArrayList<RepoSummary> items);
 
     void showMessage(String message);
 }

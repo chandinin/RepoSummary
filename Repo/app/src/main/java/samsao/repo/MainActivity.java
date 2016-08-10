@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MainView, AdapterView.OnItemClickListener {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements MainView, Adapter
         listView.setVisibility(View.VISIBLE);
     }
 
-    @Override public void setItems(List<String> items) {
+    public void setItems(ArrayList<RepoSummary> items) {
         listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items));
     }
 

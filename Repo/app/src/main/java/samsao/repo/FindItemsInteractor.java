@@ -1,5 +1,6 @@
 package samsao.repo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
 public interface FindItemsInteractor {
 
     interface OnFinishedListener {
-        void onFinished(List<String> items);
+        void onFinished(ArrayList<RepoSummary> items);
     }
 
     void findItems(OnFinishedListener listener);
